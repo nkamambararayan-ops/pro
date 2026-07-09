@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paiement — PhotoRetouch Pro</title>
+<meta name="description" content="Réglez votre commande de retouche photo via Orange Money ou MTN Mobile Money.">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3004/3004458.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand"><i class="fa-solid fa-camera-retro"></i>PhotoRetouch <span>Pro</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#avant-apres">Avant / Après</a>
+      <a href="payment.html" class="active">Paiement</a>
+      <a href="admin-login.html">Admin</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="order.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-bolt"></i><span>Commander</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Finaliser le règlement</span>
+    <h1>Espace <span class="gold-text">paiement</span></h1>
+    <p>Réglez votre commande facilement via Orange Money ou MTN Mobile Money en suivant les instructions ci-dessous.</p>
+    <div class="breadcrumb"><a href="index.html">Accueil</a> / Paiement</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div id="order-summary-banner"></div>
+
+    <div class="payment-methods">
+      <div class="payment-card reveal">
+        <div class="payment-logo orange"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Orange Money</h3>
+        <p style="color:var(--color-grey-light); font-size:0.88rem;">Effectuez votre paiement via le numéro suivant :</p>
+        <div class="payment-number">+237 6 99 00 00 00</div>
+        <ol class="payment-steps">
+          <li>Composez <strong>#150#</strong> sur votre téléphone</li>
+          <li>Sélectionnez "Transfert d'argent"</li>
+          <li>Entrez le numéro ci-dessus</li>
+          <li>Indiquez le montant exact de votre commande</li>
+          <li>Confirmez avec votre code secret Orange Money</li>
+          <li>Envoyez la capture de confirmation par WhatsApp ou email</li>
+        </ol>
+      </div>
+
+      <div class="payment-card reveal">
+        <div class="payment-logo mtn"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>MTN Mobile Money</h3>
+        <p style="color:var(--color-grey-light); font-size:0.88rem;">Effectuez votre paiement via le numéro suivant :</p>
+        <div class="payment-number">+237 6 77 00 00 00</div>
+        <ol class="payment-steps">
+          <li>Composez <strong>*126#</strong> sur votre téléphone</li>
+          <li>Sélectionnez "Transférer de l'argent"</li>
+          <li>Entrez le numéro ci-dessus</li>
+          <li>Indiquez le montant exact de votre commande</li>
+          <li>Confirmez avec votre code secret MoMo</li>
+          <li>Envoyez la capture de confirmation par WhatsApp ou email</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="payment-instructions reveal">
+      <h4><i class="fa-solid fa-circle-info"></i> Instructions importantes</h4>
+      <p>1. Effectuez le paiement du <strong>montant exact</strong> indiqué dans le récapitulatif de votre commande.</p>
+      <p>2. Envoyez une capture d'écran de la confirmation de transaction à l'adresse email de l'administrateur : <a href="mailto:nkamambararayan@gmail.com" class="gold-text">nkamambararayan@gmail.com</a> ou par WhatsApp.</p>
+      <p>3. Votre commande passera automatiquement au statut <strong>"En cours"</strong> dès validation du paiement par notre équipe.</p>
+      <p>4. Votre photo retouchée vous sera livrée dans le délai que vous avez sélectionné lors de la commande.</p>
+      <p style="margin-top:16px; color:var(--color-grey);"><i class="fa-solid fa-shield-halved gold-text"></i> Aucune information bancaire n'est demandée sur ce site. Le paiement s'effectue entièrement de façon manuelle et sécurisée via votre application Mobile Money.</p>
+    </div>
+
+    <div class="text-center mt-20" style="margin-top:40px;">
+      <a href="index.html" class="btn btn-outline">Retour à l'accueil <i class="fa-solid fa-house"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      &copy; 2026 PhotoRetouch Pro. Tous droits réservés. — Contact admin : <a href="mailto:nkamambararayan@gmail.com">nkamambararayan@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="module">
+  import { formatPrice } from "./js/data.js";
+
+  const params = new URLSearchParams(window.location.search);
+  const orderId = params.get("order");
+  const amount = params.get("amount");
+
+  if (orderId && amount) {
+    document.getElementById("order-summary-banner").innerHTML = `
+      <div class="alert alert-success reveal">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Votre commande <strong>REF-${orderId.slice(0,8).toUpperCase()}</strong> a bien été enregistrée. Montant à régler : <strong>${formatPrice(parseInt(amount))}</strong>.</span>
+      </div>
+    `;
+  }
+</script>
+</body>
+</html>

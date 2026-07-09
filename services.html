@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Services de Retouche Photo — PhotoRetouch Pro</title>
+<meta name="description" content="Catalogue complet des services de retouche photo : HD, beauté, studio, cinématique, détourage, affiches publicitaires, miniatures YouTube, restauration de photos anciennes.">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3004/3004458.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .service-detail-price {
+    font-size: 0.78rem; color: var(--color-grey); margin-top: 4px;
+  }
+  .delay-select-mini {
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand"><i class="fa-solid fa-camera-retro"></i>PhotoRetouch <span>Pro</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="index.html#avant-apres">Avant / Après</a>
+      <a href="payment.html">Paiement</a>
+      <a href="admin-login.html">Admin</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="order.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-bolt"></i><span>Commander</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Catalogue complet</span>
+    <h1>Nos services de <span class="gold-text">retouche photo</span></h1>
+    <p>Sélectionnez le service qui correspond à vos besoins. Le prix s'ajuste automatiquement selon le délai de livraison choisi lors de la commande.</p>
+    <div class="breadcrumb"><a href="index.html">Accueil</a> / Services</div>
+  </div>
+</section>
+
+<!-- ===================== FILTRES ===================== -->
+<section style="padding-bottom:0;">
+  <div class="container">
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-chip active" data-filter="all">Tous les services</button>
+      <button class="filter-chip" data-filter="popular">Populaires</button>
+      <button class="filter-chip" data-filter="classique">Retouches classiques</button>
+      <button class="filter-chip" data-filter="tendance">Effets tendance <i class="fa-solid fa-fire" style="margin-left:4px;"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GRILLE DE SERVICES ===================== -->
+<section>
+  <div class="container">
+    <div class="services-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ===================== TARIFICATION PAR DÉLAI ===================== -->
+<section style="background:var(--color-black-soft);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Tarification transparente</span>
+      <h2>Le prix s'adapte à <span class="gold-text">votre délai</span></h2>
+      <p>Plus le délai est court, plus la livraison est prioritaire. Voici notre grille tarifaire pour n'importe quel service du catalogue.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table" style="min-width:600px;">
+        <thead>
+          <tr><th>Délai de livraison</th><th>Prix</th><th></th></tr>
+        </thead>
+        <tbody id="pricing-table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="cta-banner-content">
+        <h2>Vous avez trouvé votre service ?</h2>
+        <p>Passez commande dès maintenant, uploadez votre photo et choisissez votre délai.</p>
+        <a href="order.html" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Commander maintenant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><i class="fa-solid fa-camera-retro"></i>PhotoRetouch <span>Pro</span></a>
+        <p>Votre studio de retouche photo professionnelle en ligne. Qualité premium, délais flexibles, paiement local simplifié.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="order.html">Commander</a></li>
+          <li><a href="payment.html">Paiement</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="order.html?service=hd">Amélioration HD</a></li>
+          <li><a href="order.html?service=beauty">Retouche beauté</a></li>
+          <li><a href="order.html?service=bgremove">Suppr. arrière-plan</a></li>
+          <li><a href="order.html?service=poster">Affiches publicitaires</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-envelope"></i> nkamambararayan@gmail.com</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +237 6XX XXX XXX</p>
+        <p><i class="fa-solid fa-location-dot"></i> Service 100% en ligne</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 PhotoRetouch Pro. Tous droits réservés. — Contact admin : <a href="mailto:nkamambararayan@gmail.com">nkamambararayan@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="module">
+  import { DEFAULT_DELAYS, SERVICES, formatPrice, fetchDelayPricing } from "./js/data.js";
+
+  let currentDelays = DEFAULT_DELAYS;
+
+  function renderServices(filter = "all") {
+    const grid = document.getElementById("services-grid");
+    let list = SERVICES;
+    if (filter === "popular") list = SERVICES.filter(s => s.popular);
+    if (filter === "classique") list = SERVICES.filter(s => s.category === "classique");
+    if (filter === "tendance") list = SERVICES.filter(s => s.category === "tendance");
+    grid.innerHTML = list.map(s => `
+      <div class="service-card reveal" id="${s.id}">
+        <div class="card-img">
+          <img src="${s.image}" alt="${s.name}">
+          ${s.category === 'tendance' ? '<span class="badge-popular badge-trend"><i class="fa-solid fa-fire"></i> Tendance</span>' : (s.popular ? '<span class="badge-popular">Populaire</span>' : '')}
+          <div class="card-icon"><i class="${s.icon}"></i></div>
+        </div>
+        <div class="card-body">
+          <h3>${s.name}</h3>
+          <div class="tagline">${s.tagline}</div>
+          <p>${s.description}</p>
+          <select class="form-control delay-select-mini" data-service="${s.id}">
+            ${currentDelays.map(d => `<option value="${d.id}">${d.label} — ${formatPrice(d.price)}</option>`).join("")}
+          </select>
+          <div class="card-footer">
+            <div class="price-from">Prix sélectionné<strong class="mini-price" data-for="${s.id}">${formatPrice(currentDelays[0].price)}</strong></div>
+            <a href="order.html?service=${s.id}&delay=${currentDelays[0].id}" class="card-link mini-link" data-for="${s.id}">Commander <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+    document.querySelectorAll(".delay-select-mini").forEach(sel => {
+      sel.addEventListener("change", (e) => {
+        const serviceId = e.target.dataset.service;
+        const delay = currentDelays.find(d => d.id === e.target.value);
+        document.querySelector(`.mini-price[data-for="${serviceId}"]`).textContent = formatPrice(delay.price);
+        document.querySelector(`.mini-link[data-for="${serviceId}"]`).href = `order.html?service=${serviceId}&delay=${delay.id}`;
+      });
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (!el.classList.contains('visible')) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
+        }, { threshold: 0.1 });
+        obs.observe(el);
+      }
+    });
+  }
+
+  function renderPricingTable() {
+    const tbody = document.getElementById("pricing-table-body");
+    tbody.innerHTML = currentDelays.map((d, i) => `
+      <tr>
+        <td><i class="fa-solid fa-clock" style="color:var(--color-gold); margin-right:8px;"></i>${d.label}</td>
+        <td style="color:var(--color-gold); font-weight:700;">${formatPrice(d.price)}</td>
+        <td>${i === currentDelays.length - 1 ? '<span style="color:#ff8a65; font-size:0.75rem; text-transform:uppercase;">Livraison express</span>' : (i===0 ? '<span style="color:#81c784; font-size:0.75rem; text-transform:uppercase;">Économique</span>' : '')}</td>
+      </tr>
+    `).join("");
+  }
+
+  document.querySelectorAll(".filter-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      renderServices(chip.dataset.filter);
+    });
+  });
+
+  (async function init() {
+    currentDelays = await fetchDelayPricing();
+
+    // Applique le filtre passé en paramètre d'URL (ex: ?filter=tendance)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialFilter = urlParams.get("filter") || "all";
+    document.querySelectorAll(".filter-chip").forEach(c => {
+      c.classList.toggle("active", c.dataset.filter === initialFilter);
+    });
+    renderServices(initialFilter);
+    renderPricingTable();
+
+    // Scroll auto vers un service si ancre présente dans l'URL
+    if (window.location.hash) {
+      setTimeout(() => {
+        const el = document.querySelector(window.location.hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 300);
+    }
+  })();
+</script>
+</body>
+</html>

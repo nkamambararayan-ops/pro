@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoRetouch Pro — Retouche Photo Professionnelle Premium</title>
+<meta name="description" content="PhotoRetouch Pro : services de retouche photo professionnelle en ligne. HD, beauté, studio, cinématique, détourage, affiches, miniatures YouTube et restauration de photos anciennes.">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3004/3004458.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand"><i class="fa-solid fa-camera-retro"></i>PhotoRetouch <span>Pro</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#avant-apres">Avant / Après</a>
+      <a href="payment.html">Paiement</a>
+      <a href="admin-login.html">Admin</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="order.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-bolt"></i><span>Commander</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <span class="eyebrow">Studio de retouche photo premium</span>
+    <h1>Sublimez vos photos avec une <span class="gold-text">retouche de niveau studio</span></h1>
+    <p>De l'amélioration HD à la création d'affiches publicitaires, notre équipe transforme vos images en visuels professionnels — rapidement, et au prix qui correspond à votre délai.</p>
+    <div class="hero-actions">
+      <a href="order.html" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Commander maintenant</a>
+      <a href="services.html" class="btn btn-outline"><i class="fa-solid fa-images"></i> Voir les services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">2 500+</div>
+        <div class="stat-label">Photos retouchées</div>
+      </div>
+      <div>
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Clients satisfaits</div>
+      </div>
+      <div>
+        <div class="stat-num">12h</div>
+        <div class="stat-label">Livraison express</div>
+      </div>
+    </div>
+  </div>
+  <a href="#populaires" class="scroll-cue"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ===================== SERVICES POPULAIRES ===================== -->
+<section id="populaires">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Nos offres populaires</span>
+      <h2>Des services taillés pour <span class="gold-text">sublimer</span> vos images</h2>
+      <p>Chaque service est réalisé par des retoucheurs professionnels, avec un tarif qui s'adapte à votre délai de livraison.</p>
+    </div>
+    <div class="services-grid" id="popular-services-grid"></div>
+    <div class="text-center mt-20" style="margin-top:40px;">
+      <a href="services.html" class="btn btn-outline">Voir tout le catalogue <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EFFETS TENDANCE ===================== -->
+<section id="tendance" style="background:var(--color-black-soft);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow"><i class="fa-solid fa-fire"></i> Nouveauté</span>
+      <h2>Effets <span class="gold-text">tendance</span> &amp; réseaux sociaux</h2>
+      <p>Figurine LEGO, statue dorée, avatar 3D cartoon, poster reveal façon cinéma... Les effets les plus demandés du moment, disponibles dès maintenant.</p>
+    </div>
+    <div class="services-grid" id="trend-services-grid"></div>
+    <div class="text-center mt-20" style="margin-top:40px;">
+      <a href="services.html?filter=tendance" class="btn btn-outline">Voir tous les effets tendance <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVANT / APRÈS ===================== -->
+<section id="avant-apres" style="background:var(--color-black-soft);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Nos réalisations</span>
+      <h2>Avant / <span class="gold-text">Après</span></h2>
+      <p>Faites glisser le curseur pour découvrir la magie de nos retouches professionnelles.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="reveal">
+        <div class="ba-slider">
+          <img src="images/hero-studio.jpg" alt="Photo avant retouche" class="ba-before">
+          <img src="images/service-studio.jpg" alt="Photo après retouche effet studio" class="ba-after">
+          <span class="ba-label before-label">Avant</span>
+          <span class="ba-label after-label">Après</span>
+          <div class="ba-divider"></div>
+          <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+        </div>
+        <p class="ba-caption">Effet studio professionnel</p>
+      </div>
+      <div class="reveal">
+        <div class="ba-slider">
+          <img src="images/before-after-1.jpg" alt="Portrait avant retouche beauté" class="ba-before">
+          <img src="images/service-beauty.jpg" alt="Portrait après retouche beauté" class="ba-after">
+          <span class="ba-label before-label">Avant</span>
+          <span class="ba-label after-label">Après</span>
+          <div class="ba-divider"></div>
+          <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+        </div>
+        <p class="ba-caption">Retouche beauté visage</p>
+      </div>
+      <div class="reveal">
+        <div class="ba-slider">
+          <img src="images/before-after-2.jpg" alt="Photo avant amélioration HD" class="ba-before">
+          <img src="images/service-cinematic.jpg" alt="Photo après effet cinématique" class="ba-after">
+          <span class="ba-label before-label">Avant</span>
+          <span class="ba-label after-label">Après</span>
+          <div class="ba-divider"></div>
+          <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+        </div>
+        <p class="ba-caption">Effet cinématique</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POURQUOI NOUS CHOISIR ===================== -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Pourquoi PhotoRetouch Pro</span>
+      <h2>Un service <span class="gold-text">professionnel</span>, pensé pour vous</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item reveal">
+        <div class="icon-circle"><i class="fa-solid fa-medal"></i></div>
+        <h3>Qualité premium</h3>
+        <p>Chaque retouche est réalisée à la main par des professionnels expérimentés.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-circle"><i class="fa-solid fa-stopwatch"></i></div>
+        <h3>Délais flexibles</h3>
+        <p>Choisissez votre délai, de 12 heures à 7 jours, selon votre budget et vos besoins.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-circle"><i class="fa-solid fa-money-bill-wave"></i></div>
+        <h3>Paiement local simplifié</h3>
+        <p>Payez facilement via Orange Money ou MTN Mobile Money.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-circle"><i class="fa-solid fa-lock"></i></div>
+        <h3>Confidentialité garantie</h3>
+        <p>Vos photos sont traitées avec la plus grande discrétion et ne sont jamais partagées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMMENT ÇA MARCHE ===================== -->
+<section style="background:var(--color-black-soft);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Processus simple</span>
+      <h2>Comment ça <span class="gold-text">marche</span> ?</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item reveal">
+        <div class="step-num">1</div>
+        <h3>Choisissez un service</h3>
+        <p>Parcourez notre catalogue et sélectionnez la retouche adaptée à vos besoins.</p>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">2</div>
+        <h3>Uploadez votre photo</h3>
+        <p>Envoyez votre image et choisissez votre délai de livraison préféré.</p>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">3</div>
+        <h3>Payez en toute simplicité</h3>
+        <p>Réglez via Orange Money ou MTN Mobile Money en suivant nos instructions.</p>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">4</div>
+        <h3>Recevez votre photo</h3>
+        <p>Votre photo retouchée vous est livrée dans le délai choisi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEMOIGNAGES ===================== -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Témoignages</span>
+      <h2>Ce que disent nos <span class="gold-text">clients</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Un travail impeccable sur mes photos de mariage. Le rendu studio est bluffant, je recommande vivement !"</p>
+        <div class="testimonial-author">
+          <div class="avatar-circle">A</div>
+          <div>
+            <div class="name">Aïcha N.</div>
+            <div class="role">Cliente particulière</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Mes miniatures YouTube ont un tout autre impact depuis que je passe par PhotoRetouch Pro. Livraison rapide !"</p>
+        <div class="testimonial-author">
+          <div class="avatar-circle">M</div>
+          <div>
+            <div class="name">Moussa K.</div>
+            <div class="role">Créateur de contenu</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Une vieille photo de famille restaurée à la perfection. Merci infiniment pour ce travail minutieux."</p>
+        <div class="testimonial-author">
+          <div class="avatar-circle">F</div>
+          <div>
+            <div class="name">Fatou D.</div>
+            <div class="role">Cliente particulière</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="cta-banner-content">
+        <h2>Prêt à sublimer vos photos ?</h2>
+        <p>Commandez dès maintenant votre retouche professionnelle et choisissez le délai qui vous convient.</p>
+        <a href="order.html" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Commander maintenant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><i class="fa-solid fa-camera-retro"></i>PhotoRetouch <span>Pro</span></a>
+        <p>Votre studio de retouche photo professionnelle en ligne. Qualité premium, délais flexibles, paiement local simplifié.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="order.html">Commander</a></li>
+          <li><a href="payment.html">Paiement</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#hd">Amélioration HD</a></li>
+          <li><a href="services.html#beauty">Retouche beauté</a></li>
+          <li><a href="services.html#bgremove">Suppr. arrière-plan</a></li>
+          <li><a href="services.html#poster">Affiches publicitaires</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-envelope"></i> nkamambararayan@gmail.com</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +237 6XX XXX XXX</p>
+        <p><i class="fa-solid fa-location-dot"></i> Service 100% en ligne</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 PhotoRetouch Pro. Tous droits réservés. — Contact admin : <a href="mailto:nkamambararayan@gmail.com">nkamambararayan@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="module">
+  import { SERVICES, DEFAULT_DELAYS, formatPrice } from "./js/data.js";
+
+  // Injection des services populaires (classiques) sur la page d'accueil
+  const grid = document.getElementById("popular-services-grid");
+  const classiques = SERVICES.filter(s => s.category === "classique");
+  const popular = classiques.filter(s => s.popular).concat(classiques.filter(s => !s.popular)).slice(0, 4);
+  grid.innerHTML = popular.map(s => `
+    <div class="service-card reveal">
+      <div class="card-img">
+        <img src="${s.image}" alt="${s.name}">
+        ${s.popular ? '<span class="badge-popular">Populaire</span>' : ''}
+        <div class="card-icon"><i class="${s.icon}"></i></div>
+      </div>
+      <div class="card-body">
+        <h3>${s.name}</h3>
+        <div class="tagline">${s.tagline}</div>
+        <p>${s.description}</p>
+        <div class="card-footer">
+          <div class="price-from">À partir de<strong>${formatPrice(DEFAULT_DELAYS[0].price)}</strong></div>
+          <a href="order.html?service=${s.id}" class="card-link">Commander <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  // Injection des effets tendance sur la page d'accueil
+  const trendGrid = document.getElementById("trend-services-grid");
+  const trends = SERVICES.filter(s => s.category === "tendance").slice(0, 4);
+  trendGrid.innerHTML = trends.map(s => `
+    <div class="service-card reveal">
+      <div class="card-img">
+        <img src="${s.image}" alt="${s.name}">
+        <span class="badge-popular badge-trend"><i class="fa-solid fa-fire"></i> Tendance</span>
+        <div class="card-icon"><i class="${s.icon}"></i></div>
+      </div>
+      <div class="card-body">
+        <h3>${s.name}</h3>
+        <div class="tagline">${s.tagline}</div>
+        <p>${s.description}</p>
+        <div class="card-footer">
+          <div class="price-from">À partir de<strong>${formatPrice(DEFAULT_DELAYS[0].price)}</strong></div>
+          <a href="order.html?service=${s.id}" class="card-link">Commander <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  // Re-observer les nouveaux éléments reveal
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (!el.classList.contains('visible')) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
+      }, { threshold: 0.1 });
+      obs.observe(el);
+    }
+  });
+</script>
+</body>
+</html>

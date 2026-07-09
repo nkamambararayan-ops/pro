@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion Admin — PhotoRetouch Pro</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3004/3004458.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="admin-login-wrap">
+  <div class="admin-login-card">
+    <div class="logo-mark"><i class="fa-solid fa-lock"></i></div>
+    <h2>Espace Administration</h2>
+    <p class="subtitle">Accès réservé — PhotoRetouch Pro (sécurisé par Firebase Authentication)</p>
+
+    <div id="alert-zone"></div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label for="admin_email">Email administrateur</label>
+        <input type="email" id="admin_email" class="form-control" placeholder="nkamambararayan@gmail.com" required>
+      </div>
+      <div class="form-group">
+        <label for="admin_password">Mot de passe</label>
+        <input type="password" id="admin_password" class="form-control" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" id="login-btn"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</button>
+    </form>
+
+    <a href="index.html" style="display:block; margin-top:24px; font-size:0.85rem; color:var(--color-grey);"><i class="fa-solid fa-arrow-left"></i> Retour au site</a>
+  </div>
+</div>
+
+<script type="module">
+  import { auth } from "./js/firebase-config.js";
+  import { ADMIN_EMAIL } from "./js/data.js";
+  import {
+    signInWithEmailAndPassword,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  const zone = document.getElementById("alert-zone");
+  const form = document.getElementById("login-form");
+  const loginBtn = document.getElementById("login-btn");
+
+  // Pré-remplit l'email admin pour plus de confort
+  document.getElementById("admin_email").value = ADMIN_EMAIL;
+
+  function showError(message) {
+    zone.innerHTML = `<div class="alert alert-error"><i class="fa-solid fa-circle-exclamation"></i><span>${message}</span></div>`;
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("admin_email").value.trim();
+    const password = document.getElementById("admin_password").value;
+
+    if (email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+      showError("Seul le compte administrateur autorisé peut se connecter à cet espace.");
+      return;
+    }
+
+    loginBtn.disabled = true;
+    loginBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Connexion...';
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      window.location.href = "admin.html";
+    } catch (err) {
+      console.error(err);
+      let msg = "Email ou mot de passe incorrect.";
+      if (err.code === "auth/user-not-found") {
+        msg = "Aucun compte administrateur n'existe encore avec cet email. Créez-le depuis la Console Firebase (Authentication → Users → Add user).";
+      } else if (err.code === "auth/too-many-requests") {
+        msg = "Trop de tentatives. Veuillez réessayer plus tard.";
+      } else if (err.code === "auth/invalid-credential" || err.code === "auth/wrong-password") {
+        msg = "Mot de passe incorrect.";
+      }
+      showError(msg);
+    } finally {
+      loginBtn.disabled = false;
+      loginBtn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Se connecter';
+    }
+  });
+
+  // Si déjà connecté avec le bon compte admin, rediriger directement vers le panneau
+  onAuthStateChanged(auth, (user) => {
+    if (user && user.email && user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+      window.location.href = "admin.html";
+    }
+  });
+</script>
+</body>
+</html>
